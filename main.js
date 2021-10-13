@@ -12,8 +12,11 @@ function hozzaad() {
     let szoveg = document.createElement("label");
     szoveg.innerHTML = todo;
     listaElem.appendChild(szoveg);
-    listaElem.append(" X");
 
+    let x = document.createElement("label");
+    x.innerHTML = "X";
+    x.addEventListener("click", torles);
+    listaElem.appendChild(x);
     
 
     document.getElementById("lista").appendChild(listaElem);
@@ -23,6 +26,10 @@ function elvegezve(e) {
     let elvegzett = e.target.parentNode;
     let szoveg = elvegzett.getElementsByTagName("label")[0];
     szoveg.classList.toggle("athuz");
+}
+
+function torles(e){
+    e.target.parentNode.remove();
 }
 
 function init() {

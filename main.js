@@ -13,10 +13,11 @@ function hozzaad() {
     szoveg.innerHTML = todo;
     listaElem.appendChild(szoveg);
 
-    let x = document.createElement("label");
-    x.innerHTML = "X";
-    x.addEventListener("click", torles);
-    listaElem.appendChild(x);
+    let torlesBtn = document.createElement("label");
+    torlesBtn.innerHTML = "X";
+    torlesBtn.className = "torlesBtn";
+    torlesBtn.addEventListener("click", torles);
+    listaElem.appendChild(torlesBtn);
     
 
     document.getElementById("lista").appendChild(listaElem);
